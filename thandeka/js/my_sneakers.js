@@ -119,3 +119,23 @@ var sneakers = [
        "Price": "1300"
     }
 ];
+
+
+
+function generateTable(table, data) {
+   for (let element of data) {
+     let row = table.insertRow();
+     for (key in element) {
+       let cell = row.insertCell();
+       let text = document.createTextNode(element[key]);
+       cell.appendChild(text);
+     }
+   }
+ }
+
+ 
+let table = document.querySelector("tbody");
+let data = Object.keys(sneakers[0]);
+generateTable(table, sneakers);
+
+
