@@ -148,14 +148,16 @@ SneakerCount();
 
 //count number of brans and display on card
 function BrandCount() {
-   var results_arr = [];
-   data.filter(function(item){
-      var i = results_arr.findIndex(x => (sneakers.Brand == item.Brand));
+   var results_arr = [];      //create an empty array
+   sneakers.filter(function(item){
+      var i = results_arr.findIndex(x => (x.Brand == item.Brand));   //find whether the item's index is more than -1 meaning a similar exists
       if(i <= -1){
-            results_arr.push(item);
+            results_arr.push(item);    //if it means condition, push into results array
       }
       return null;
     });
-   var brandNum = uniqueBrands.length
+   var brandNum = results_arr.length      //get length of results array to get number of brands
+   document.getElementById("brandCount").innerHTML =  brandNum +  " " + "unique brands!";
+
 }
 
