@@ -166,6 +166,6 @@ function GetValue(){
    }
    // extract the prices from map and sum them all up
    totWorth = sneakers.map(price).reduce(sum);
-   document.getElementById("priceCount").innerHTML = "ZAR" + totWorth +  " " + "worth so far!";
+   document.getElementById("priceCount").innerHTML = "ZAR" + totWorth +  " " + "invested so far!";
 };
 GetValue()
