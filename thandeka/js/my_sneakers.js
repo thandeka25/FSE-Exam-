@@ -121,6 +121,8 @@ var sneakers = [
 ];
 
 
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
 //dynamically add content to table from array
 function generateTable(table, data) {
    for (let element of data) {
@@ -132,12 +134,10 @@ function generateTable(table, data) {
      }
    }
  };
-
- 
 let table = document.querySelector("tbody");
 generateTable(table, sneakers);
 
-//dynamically change content of cards
+/** dynamically change content of cards */
 
 //count number of sneakers and display on card
 function SneakerCount() {
