@@ -120,7 +120,8 @@ var sneakers = [
     }
 ];
 
-
+//allow for sneakers array to be exported into dynamic.js
+module.exports = {sneakers};
 
 function generateTable(table, data) {
    for (let element of data) {
@@ -135,7 +136,6 @@ function generateTable(table, data) {
 
  
 let table = document.querySelector("tbody");
-let data = Object.keys(sneakers[0]);
 generateTable(table, sneakers);
 
 
