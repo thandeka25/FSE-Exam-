@@ -120,9 +120,8 @@ var sneakers = [
     }
 ];
 
-//allow for sneakers array to be exported into dynamic.js
-module.exports = {sneakers};
 
+//dynamically add content to table from array
 function generateTable(table, data) {
    for (let element of data) {
      let row = table.insertRow();
@@ -138,4 +137,25 @@ function generateTable(table, data) {
 let table = document.querySelector("tbody");
 generateTable(table, sneakers);
 
+//dynamically change content of cards
+
+//count number of sneakers and display on card
+function SneakerCount() {
+   var shoeNum = sneakers.length;
+   document.getElementById("shoeCount").innerHTML =  shoeNum +  " " + "shoes in collection!";
+};
+SneakerCount();
+
+//count number of brans and display on card
+function BrandCount() {
+   var results_arr = [];
+   data.filter(function(item){
+      var i = results_arr.findIndex(x => (sneakers.Brand == item.Brand));
+      if(i <= -1){
+            results_arr.push(item);
+      }
+      return null;
+    });
+   var brandNum = uniqueBrands.length
+}
 
