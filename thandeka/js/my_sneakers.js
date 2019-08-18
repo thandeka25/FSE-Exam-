@@ -4,119 +4,119 @@ var sneakers = [
        "Style": "Cortez",
        "Color": "White",
        "Date": "2019-01-30",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 97",
        "Color": "Red",
        "Date": "2018-04-02",
-       "Price": "1700"
+       "Price": 1700
     },
     {
        "Brand": "Adidas",
        "Style": "Ultra Boost",
        "Color": "Black",
        "Date": "2018-06-18",
-       "Price": "1800"
+       "Price": 1800
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 90",
        "Color": "Blue",
        "Date": "2019-02-03",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "Adidas",
        "Style": "Stan Smith",
        "Color": "White",
        "Date": "2018-02-15",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "Adidas",
        "Style": "Ultra Boost",
        "Color": "Silver",
        "Date": "2018-05-01",
-       "Price": "1800"
+       "Price": 1800
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 90",
        "Color": "White / Red",
        "Date": "2018-07-22",
-       "Price": "1700"
+       "Price": 1700
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 90",
        "Color": "Navy",
        "Date": "2018-01-31",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "New Balance",
        "Style": "997 Classic",
        "Color": "Blue",
        "Date": "2018-12-23",
-       "Price": "1100"
+       "Price": 1100
     },
     {
        "Brand": "Puma",
        "Style": "Suede Classic",
        "Color": "Silver",
        "Date": "2018-11-01",
-       "Price": "1300"
+       "Price": 1300
     },
     {
        "Brand": "Nike",
        "Style": "Air Vapormax",
        "Color": "Black",
        "Date": "2019-03-29",
-       "Price": "3000"
+       "Price": 3000
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 95",
        "Color": "Neon",
        "Date": "2018-02-15",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 97",
        "Color": "Silver",
        "Date": "2018-10-22",
-       "Price": "1800"
+       "Price": 1800
     },
     {
        "Brand": "Nike",
        "Style": "Air Max 90",
        "Color": "White / Red",
        "Date": "2018-07-22",
-       "Price": "1700"
+       "Price": 1700
     },
     {
        "Brand": "Nike",
        "Style": "Air Force 1",
        "Color": "Navy",
        "Date": "2019-02-14",
-       "Price": "1500"
+       "Price": 1500
     },
     {
        "Brand": "Adidas",
        "Style": "Gazelle",
        "Color": "Blue",
        "Date": "2018-01-01",
-       "Price": "1300"
+       "Price": 1300
     },
     {
        "Brand": "Nike",
        "Style": "Air Presto",
        "Color": "Black",
        "Date": "2018-04-28",
-       "Price": "1300"
+       "Price": 1300
     }
 ];
 
@@ -131,7 +131,7 @@ function generateTable(table, data) {
        cell.appendChild(text);
      }
    }
- }
+ };
 
  
 let table = document.querySelector("tbody");
@@ -146,18 +146,26 @@ function SneakerCount() {
 };
 SneakerCount();
 
-//count number of brans and display on card
+//count number of unique brands and display on card
 function BrandCount() {
-   var results_arr = [];      //create an empty array
-   sneakers.filter(function(item){
-      var i = results_arr.findIndex(x => (x.Brand == item.Brand));   //find whether the item's index is more than -1 meaning a similar exists
-      if(i <= -1){
-            results_arr.push(item);    //if it means condition, push into results array
-      }
-      return null;
-    });
-   var brandNum = results_arr.length      //get length of results array to get number of brands
+   const results_arr = [...new Set(sneakers.map(sneakers => sneakers.Brand))]; //set collects all the unique values. (...) spreads the values in an array. map returns a list of the property values of Brand
+   var brandNum = results_arr.length;      //get length of results array to get number of brands
    document.getElementById("brandCount").innerHTML =  brandNum +  " " + "unique brands!";
+;}
+BrandCount();
 
-}
-
+//count the current total value of collection
+function GetValue(){
+   //create a function to extract all the prices
+   function price(item){
+      return item.Price;
+   }
+    //create a summing function
+   function sum(prev, next){
+      return prev + next;
+   }
+   // extract the prices from map and sum them all up
+   totWorth = sneakers.map(price).reduce(sum);
+   document.getElementById("priceCount").innerHTML = "ZAR" + totWorth +  " " + "worth so far!";
+};
+GetValue()
