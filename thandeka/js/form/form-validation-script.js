@@ -21,7 +21,7 @@ var Script = function () {
                 },
                 color: {
                     required: true,
-                    minlength: 3
+                    minlength: 1
                 },
                 shoeprice: {
                     required: true,
@@ -32,17 +32,20 @@ var Script = function () {
             messages: {                
                 brand: {
                     required: "Please enter a Brand.",
-                    minlength: "Your Brand name must be valid."
+                    minlength: "Please enter a Brand."
                 },
                 style: {
-                    required: "Please enter the Style.",
-                    minlength: "Your Style must be valid."
+                    required: "Please enter a Style.",
+                    minlength: "Please enter a Style."
                 },
                 color: {
                     required: "Please enter a Color.",
-                    minlength: "Your Color must be valid."
+                    minlength:  "Please enter a Color."
                 },
-                shoeprice: "Please enter a valid price without the ZAR lettering included.",
+                shoeprice: {
+                    required: "Please enter a price (leave out currency).",
+                    number:  "Please enter the price without the currency (e.g 199 instead of R199)."
+                },
                 agree: "Please accept our terms & condition."
             }
         });
