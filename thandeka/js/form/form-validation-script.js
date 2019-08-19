@@ -15,34 +15,17 @@ var Script = function () {
                     required: true,
                     minlength: 1
                 },
-                address: {
+                style: {
                     required: true,
-                    minlength: 10
+                    minlength: 1
                 },
-                username: {
+                color: {
                     required: true,
-                    minlength: 5
-                },
-                password: {
-                    required: true,
-                    minlength: 5
-                },
-                confirm_password: {
-                    required: true,
-                    minlength: 5,
-                    equalTo: "#password"
-                },
-                email: {
-                    required: true,
-                    email: true
+                    minlength: 3
                 },
                 shoeprice: {
                     required: true,
                     number: true
-                },
-                topic: {
-                    required: "#newsletter:checked",
-                    minlength: 2
                 },
                 agree: "required"
             },
@@ -51,25 +34,15 @@ var Script = function () {
                     required: "Please enter a Brand.",
                     minlength: "Your Brand name must be valid."
                 },
-                address: {
-                    required: "Please enter a Address.",
-                    minlength: "Your Address must consist of at least 10 characters long."
+                style: {
+                    required: "Please enter the Style.",
+                    minlength: "Your Style must be valid."
                 },
-                username: {
-                    required: "Please enter a Username.",
-                    minlength: "Your username must consist of at least 5 characters long."
+                color: {
+                    required: "Please enter a Color.",
+                    minlength: "Your Color must be valid."
                 },
-                password: {
-                    required: "Please provide a password.",
-                    minlength: "Your password must be at least 5 characters long."
-                },
-                confirm_password: {
-                    required: "Please provide a password.",
-                    minlength: "Your password must be at least 5 characters long.",
-                    equalTo: "Please enter the same password as above."
-                },
-                email: "Please enter a valid email address.",
-                shoeprice: "Please enter a valid price.",
+                shoeprice: "Please enter a valid price without the ZAR lettering included.",
                 agree: "Please accept our terms & condition."
             }
         });
