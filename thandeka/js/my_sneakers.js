@@ -155,7 +155,7 @@ function BrandCount() {
 BrandCount();
 
 //count the current total value of collection
-function GetValue(){
+/** function GetValue(){
    //create a function to extract all the prices
    function price(item){
       return item.Price;
@@ -168,7 +168,7 @@ function GetValue(){
    totWorth = sneakers.map(price).reduce(sum);
    document.getElementById("priceCount").innerHTML = "ZAR" + totWorth +  " " + "invested so far!";
 };
-GetValue()
+GetValue() */
 
 //Dynamically append new information to array
 function AddInput() {
