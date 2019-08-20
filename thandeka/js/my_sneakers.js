@@ -172,25 +172,26 @@ GetValue() */
 
 //Dynamically append new information to array
 function AddInput() {
-   item = {}  //create empty object
+   item = {};  //create empty object
    //get object's properties from input
-   brandvalue= document.getElementById('brand').value;
-   stylevalue= document.getElementById('style').value;
-   colorvalue= document.getElementById('color').value;
-   datevalue= document.getElementById('purdate').value;
-   shoepriceval= document.getElementById('shoeprice').value;
+   var brandvalue= document.getElementById('brand').value;
+   var stylevalue= document.getElementById('style').value;
+   var colorvalue= document.getElementById('color').value;
+   var datevalue= document.getElementById('purdate').value;
+   var shoepriceval= document.getElementById('shoeprice').value;
 
    
    //add properties to object
    item.Brand = brandvalue;
    item.Style = stylevalue;
    item.Color = colorvalue;
-   item.Date = datevalue
+   item.Date = datevalue;
    item.Price = shoepriceval;
 
 
    //push object into array
-   sneakers.push(item);  
+   sneakers.push(item);
+   console.log(sneakers);
+   //return false  
  };
-
  AddInput()
