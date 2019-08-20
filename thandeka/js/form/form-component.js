@@ -68,12 +68,12 @@ var Script = function() {
 
 
   //color picker
-
+  /** 
   $('.cp1').colorpicker({
     format: 'hex'
   });
   $('.cp2').colorpicker();
-
+  */
 
   //date picker
 
@@ -146,7 +146,7 @@ var Script = function() {
 
 
   //daterange picker
-
+  /**
   $('#reservation').daterangepicker();
 
   $('#reportrange').daterangepicker({
@@ -196,6 +196,6 @@ var Script = function() {
   $('#reportrange span').html(Date.today().add({
     days: -29
   }).toString('MMMM d, yyyy') + ' - ' + Date.today().toString('MMMM d, yyyy'));
-
+  */
 
 }();
