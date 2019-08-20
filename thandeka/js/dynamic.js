@@ -1,7 +1,7 @@
 const fs = require('fs');
 var data = fs.readFileSync('my_sneakers.json'); //allows for data to be read first before anything else happens
-var sneakercoll = JSON.parse(file);
-console.log(sneakers)
+var sneakercoll = JSON.parse(data); //turn it into js format
+console.log(sneakercoll)
 
 
 function AddInput() {
@@ -24,7 +24,11 @@ function AddInput() {
 
   //push object into array
   sneakercoll.push(item);
-
+  var sneakercoll = JSON.stringify(sneakercoll) //turn it into json format
+  fs.writeFile(my_sneakers.json, sneakercoll, finished);
+    function finished(err){
+      console.log('all set')
+    }
   console.log(sneakercoll)
   return false  
 };
