@@ -169,3 +169,28 @@ function GetValue(){
    document.getElementById("priceCount").innerHTML = "ZAR" + totWorth +  " " + "invested so far!";
 };
 GetValue()
+
+//Dynamically append new information to array
+function AddInput() {
+   item = {}  //create empty object
+   //get object's properties from input
+   brandvalue= document.getElementById('brand').value;
+   stylevalue= document.getElementById('style').value;
+   colorvalue= document.getElementById('color').value;
+   datevalue= document.getElementById('dp1').value;
+   shoepriceval= document.getElementById('shoeprice').value;
+
+   
+   //add properties to object
+   item.Brand = brandvalue;
+   item.Style = stylevalue;
+   item.Color = colorvalue;
+   item.Date = datevalue
+   item.Price = shoepriceval;
+
+
+   //push object into array
+   sneakers.push(item);  
+ };
+
+ AddInput()

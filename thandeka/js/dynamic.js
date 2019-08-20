@@ -1,20 +1,23 @@
-//import array into dynamic.js from my_sneakers.js
-//import { data } from './my_sneakers';
-var data = require('./my_sneakers');
-//file to add functions for javascript
+function AddInput() {
+    item = {}  //create empty object
+    //get object's properties from input
+    brandvalue= document.getElementById('brand').value;
+    stylevalue= document.getElementById('style').value;
+    colorvalue= document.getElementById('color').value;
+    datevalue= document.getElementById('dp1').value;
+    shoepriceval= document.getElementById('shoeprice').value;
 
-function changeText() {
-    document.getElementById("shoeCount").innerHTML =  "25 shoes in collection!";
-};
-
-changeText()
-
-
-//functions to check for form validation
-
+    
+    //add properties to object
+    item.Brand = brandvalue;
+    item.Style = stylevalue;
+    item.Color = colorvalue;
+    item.Date = datevalue
+    item.Price = shoepriceval;
 
 
-//function to append data  to js file and table from form
+    //push object into array
+    sneakers.push(item);  
+  };
 
-
-//any extra functions
+  AddInput()
