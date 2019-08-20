@@ -177,7 +177,7 @@ function AddInput() {
    brandvalue= document.getElementById('brand').value;
    stylevalue= document.getElementById('style').value;
    colorvalue= document.getElementById('color').value;
-   datevalue= document.getElementById('dp1').value;
+   datevalue= document.getElementById('purdate').value;
    shoepriceval= document.getElementById('shoeprice').value;
 
    

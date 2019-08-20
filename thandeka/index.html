@@ -163,7 +163,7 @@
               </header>
               <div class="panel-body">
                 <div class="form">
-                  <form class="form-validate form-horizontal " id="register_form" method="get" action="" onsubmit = AddInput()>
+                  <form class="form-validate form-horizontal " id="register_form" method="get" action="" onsubmit = "return AddInput()">
                     <div class="form-group ">
                       <label for="fullname" class="control-label col-lg-2">Brand <span class="required">*</span></label>
                       <div class="col-lg-10">
@@ -351,6 +351,34 @@
   <!-- custom form validation script for this page-->
   <script src="js/form/form-validation-script.js"></script>
  
+
+  <script>
+    dummy = [];
+  function AddInput() {
+   item = {}  //create empty object
+   //get object's properties from input
+   brandvalue= document.getElementById('brand').value;
+   stylevalue= document.getElementById('style').value;
+   colorvalue= document.getElementById('color').value;
+   datevalue= document.getElementById('purdate').value;
+   shoepriceval= document.getElementById('shoeprice').value;
+
+   
+   //add properties to object
+   item.Brand = brandvalue;
+   item.Style = stylevalue;
+   item.Color = colorvalue;
+   item.Date = datevalue
+   item.Price = shoepriceval;
+
+
+   //push object into array
+   dummy.push(item);
+   return false  
+ };
+
+ AddInput()
+  </script>
 
 
  
