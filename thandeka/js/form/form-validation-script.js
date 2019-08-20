@@ -5,14 +5,7 @@ var Script = function () {
     });
 
 
-    $.validator.addMethod(
-        "PurchaseDate",
-        function(value, element) {
-            // put your own logic here, this is just a (crappy) example
-            return value.match(/^(0?[1-9]|[12][0-9]|3[0-1])[/., -](0?[1-9]|1[0-2])[/., -](19|20)?\d{2}$/);
-        },
-        "Please enter a date in the format dd/mm/yyyy."
-    );
+    
 
     $().ready(function() {
         // validate the comment form when it is submitted
@@ -35,7 +28,7 @@ var Script = function () {
                 },
                 purdate: {
                     required: true,
-                    PurchaseDate: true
+                    dateISO: true
                 },
                 shoeprice: {
                     required: true,
@@ -58,7 +51,7 @@ var Script = function () {
                 },
                 purdate: {
                     required: "Please enter the date of purchase.",
-                    PurchaseDate:  "Please enter a date in the format dd/mm/yyyy."
+                    dateISO:  "Please enter a date in the format YYYY-MM-DD."
                 },
                 shoeprice: {
                     required: "Please enter a price (leave out currency).",
