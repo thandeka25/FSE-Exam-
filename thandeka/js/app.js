@@ -41,5 +41,5 @@ function AddInput() {
       console.log('all set')
     }
   console.log(sneakercoll)
-  return false 
-  
+  return false;
+} 
