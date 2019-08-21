@@ -1,12 +1,5 @@
 # [Start Bootstrap - SB Admin](https://startbootstrap.com/template-overviews/sb-admin/)
 
-[SB Admin](http://startbootstrap.com/template-overviews/sb-admin/) is an open source, admin dashboard template for [Bootstrap](http://getbootstrap.com/) created by [Start Bootstrap](http://startbootstrap.com/).
-
-## Preview
-
-[![SB Admin Preview](https://startbootstrap.com/assets/img/templates/sb-admin.jpg)](https://blackrockdigital.github.io/startbootstrap-sb-admin/)
-
-**[View Live Preview](https://blackrockdigital.github.io/startbootstrap-sb-admin/)**
 
 ## Status
 
@@ -28,11 +21,31 @@ To begin using this template, choose one of the following options to get started
 
 ### Basic Usage
 
-After downloading, simply edit the HTML and CSS files included with the template in your favorite text editor to make changes. These are the only files you need to worry about, you can ignore everything else! To preview the changes you make to the code, you can open the `index.html` file in your web browser.
+The website was based on a bootstrap template that was modified to fit the exam requirements. There are three sections on the we page. 
+
+The first  section is made up three cards. They show how many shoes are in Javascript array, how many unique brands are present and a link to Superbalist's store, respectively. The brand card also features a link to a blog on sneaker news.
+
+The second section is made up of a form that is used to record new purchases. It checks the contents to make sure they meet the requirements. The date input is checked for a specific format whilst the price input only take numbers.
+
+The last section is the table holding the currently available shoes in the array. The table can be searched and can also be sorted using each table. The user can decide how many entries they want to view at a time. 
+
+
+
+## Linkages
+
+###my_sneakers.js
+
+
+
+
+
 
 ### Advanced Usage
 
-After installation, run `npm install` and then run `npm start` which will open up a preview of the template in your default browser, watch for changes to core template files, and live reload the browser when changes are saved. You can view the `gulpfile.js` to see which tasks are included with the dev environment.
+After installation, run `npm install` and then run `npm init`  in the js folder. Follow this up by starting up the server with `node app.js` This will start running the node from port 3000
+
+####app.js
+The app.js file runs the server. The server is able to load up the json server and show all the current objects in the array.
 
 #### Gulp Tasks
 
@@ -42,28 +55,7 @@ After installation, run `npm install` and then run `npm start` which will open u
 - `gulp js` minifies the themes JS file
 - `gulp vendor` copies dependencies from node_modules to the vendor directory
 
-## Bugs and Issues
-
-Have a bug or an issue with this template? [Open a new issue](https://github.com/BlackrockDigital/startbootstrap-sb-admin/issues) here on GitHub or leave a comment on the [template overview page at Start Bootstrap](http://startbootstrap.com/template-overviews/sb-admin/).
-
-## Custom Builds
-
-You can hire Start Bootstrap to create a custom build of any template, or create something from scratch using Bootstrap. For more information, visit the **[custom design services page](https://startbootstrap.com/bootstrap-design-services/)**.
-
-## About
-
-Start Bootstrap is an open source library of free Bootstrap templates and themes. All of the free templates and themes on Start Bootstrap are released under the MIT license, which means you can use them for any purpose, even for commercial projects.
-
-* https://startbootstrap.com
-* https://twitter.com/SBootstrap
-
-Start Bootstrap was created by and is maintained by **[David Miller](http://davidmiller.io/)**, Owner of [Blackrock Digital](http://blackrockdigital.io/).
-
-* http://davidmiller.io
-* https://twitter.com/davidmillerskt
-* https://github.com/davidtmiller
-
-Start Bootstrap is based on the [Bootstrap](http://getbootstrap.com/) framework created by [Mark Otto](https://twitter.com/mdo) and [Jacob Thorton](https://twitter.com/fat).
+#### 
 
 ## Copyright and License
 
