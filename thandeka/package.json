@@ -56,5 +56,5 @@
     "merge-stream": "2.0.0",
     "watchify": "^3.11.1"
   },
-  "main": "app.js"
+  "main": "gulpfile.js"
 }
