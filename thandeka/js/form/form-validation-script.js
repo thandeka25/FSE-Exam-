@@ -16,15 +16,15 @@ var Script = function () {
             rules: {
                 brand: {
                     required: true,
-                    minlength: 1
+                    minlength: 3
                 },
                 style: {
                     required: true,
-                    minlength: 1
+                    minlength: 3
                 },
                 color: {
                     required: true,
-                    minlength: 1
+                    minlength: 3
                 },
                 purdate: {
                     required: true,
