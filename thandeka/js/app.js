@@ -16,8 +16,7 @@ console.log(sneakercoll);
 const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
-
-app.use(bodyParser.urlencoded({ extended: true })); 
+ 
 
 app.post('/example', (req, res) => {
   res.send(`Full name is:${req.body.brand} ${req.body.style} ${req.body.color} ${req.body.purdate} ${req.body.shoeprice}.`);
