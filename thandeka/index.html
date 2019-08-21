@@ -45,7 +45,14 @@
           var Zuva = $("#purdate").val();
           var Mari = $("#shoeprice").val();
           var markup = "<tr><td>" + Br +"</td><td>" + Sty + "</td><td>" + Col +  "</td><td>" + Zuva +  "</td><td>" + Mari +  "</td></tr>";
-          $('#dataTable').append(markup);
+
+          if(Br !== "" && Sty !== "" && Col !== "" && Zuva !== "" && Mari !== ""){
+            $('#dataTable').append(markup);
+            alert("Your collection has been updated in the table below")
+          } else{
+            alert("There is information missing from your purchase")
+          }
+          
       }
       </script>
 
