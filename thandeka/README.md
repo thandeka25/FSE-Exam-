@@ -21,23 +21,16 @@ To begin using this template, choose one of the following options to get started
 
 ### Basic Usage
 
-The website was based on a bootstrap template that was modified to fit the exam requirements. There are three sections on the we page. 
+The website was based on a bootstrap template that was modified to fit the exam requirements. There are three sections on the web page. 
 
 The first  section is made up three cards. They show how many shoes are in Javascript array, how many unique brands are present and a link to Superbalist's store, respectively. The brand card also features a link to a blog on sneaker news.
 
 The second section is made up of a form that is used to record new purchases. It checks the contents to make sure they meet the requirements. The date input is checked for a specific format whilst the price input only take numbers.
 
-The last section is the table holding the currently available shoes in the array. The table can be searched and can also be sorted using each table. The user can decide how many entries they want to view at a time. 
-
+The last section is the table holding the currently available shoes in the array. The table can be searched and can also be sorted using each table. The user can decide how many entries they want to view at a time. The script at the top is for appending form inputs into the table. 
 
 
 ## Linkages
-
-###my_sneakers.js
-
-
-
-
 
 
 ### Advanced Usage
