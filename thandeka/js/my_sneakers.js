@@ -190,8 +190,11 @@ function AddInput() {
 
 
    //push object into array
-   sneakers.push(item);
-   console.log(sneakers);
+   if (brandvalue != "" && stylevalue != "" && colorvalue != "" && dateevalue != "" && shoeprice != "" ){
+      sneakers.push(item);
+      console.log(sneakers);
+   }  
+   
    //return false  
  };
  AddInput()
